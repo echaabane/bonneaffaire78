@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonne Affaire 78 - Meubles Nouvelle Génération</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛋️</text></svg>">
+</head>
+<body class="page-transition">
+    <!-- Navigation Flottante -->
+    <div class="nav-wrapper">
+        <nav>
+            <div class="logo">🛋️ Bonne Affaire 78</div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#categories">Catégories</a></li>
+                <li><a href="#products">Produits</a></li>
+                <li><a href="#about">À Propos</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Panier Flottant -->
+    <div class="cart-floating" onclick="toggleCart()">
+        🛒
+        <div class="cart-count-floating" id="cart-count-floating">0</div>
+    </div>
+
+    <!-- Section Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Meubles Nouvelle Génération</h1>
+            <p class="hero-subtitle">Lits, Tables avec 6 Chaises, Canapés-Lits & Tables Gigognes<br>
+            🔥 Les meilleures affaires des Yvelines !</p>
+            <a href="#products" class="cta-main">Découvrir la Collection</a>
+        </div>
+    </section>
+
+    <!-- Section Catégories -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Nos Spécialités</h2>
+            <div class="category-grid">
+                <div class="category-card animate-in" onclick="filterProducts('salon')" style="animation-delay: 0.1s">
+                    <span class="category-icon">🛋️</span>
+                    <h3>Canapés-Lits</h3>
+                    <p>Convertibles 2 en 1, parfaits pour optimiser l'espace</p>
+                </div>
+                <div class="category-card animate-in" onclick="filterProducts('chambre')" style="animation-delay: 0.2s">
+                    <span class="category-icon">🛏️</span>
+                    <h3>Lits Confort</h3>
+                    <p>Toutes tailles, avec ou sans sommier inclus</p>
+                </div>
+                <div class="category-card animate-in" onclick="filterProducts('cuisine')" style="animation-delay: 0.3s">
+                    <span class="category-icon">🍽️</span>
+                    <h3>Ensembles Table + 6 Chaises</h3>
+                    <p>Solutions complètes pour recevoir famille et amis</p>
+                </div>
+                <div class="category-card animate-in" onclick="filterProducts('gigogne')" style="animation-delay: 0.4s">
+                    <span class="category-icon">📐</span>
+                    <h3>Tables Gigognes</h3>
+                    <p>Modulables et gain de place, design tendance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Produits -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">🔥 Offres Exceptionnelles</h2>
+            <div class="product-grid" id="product-grid">
+                <!-- Les produits seront chargés dynamiquement -->
+                <div class="loading-products">
+                    <div class="loading-spinner">🔄</div>
+                    <p>Chargement des offres exceptionnelles...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>💫 L'Excellence à Prix Mini</h2>
+                <p>Bonne Affaire 78, c'est votre partenaire déco depuis 10 ans ! Nous dénichons les plus beaux meubles pour transformer votre intérieur sans exploser votre budget.</p>
+                <p>Spécialisés dans les <strong>canapés-lits</strong>, <strong>lits confort</strong>, <strong>ensembles table + 6 chaises</strong> et <strong>tables gigognes</strong>, nous avons ce qu'il faut pour chaque style de vie !</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <span class="feature-icon">🚚</span>
+                        <h4>Livraison Gratuite</h4>
+                        <p>Dans tout le 78</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🔧</span>
+                        <h4>Montage Inclus</h4>
+                        <p>Service premium</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">✅</span>
+                        <h4>Garantie 30J</h4>
+                        <p>Satisfait ou remboursé</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">📱</span>
+                        <h4>Suivi TikTok</h4>
+                        <p>@bonneaffaire78</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📍 Showroom & Contact</h3>
+                    <p>78000 Versailles, France</p>
+                    <p>📞 01 23 45 67 89</p>
+                    <p>✉️ hello@bonneaffaire78.fr</p>
+                    <p>💬 WhatsApp: 06 12 34 56 78</p>
+                </div>
+                <div class="footer-section">
+                    <h3>⏰ Horaires d'Ouverture</h3>
+                    <p>Lundi - Vendredi: 9h00 - 19h00</p>
+                    <p>Samedi: 9h00 - 17h00</p>
+                    <p>Dimanche: Sur RDV uniquement</p>
+                </div>
+                <div class="footer-section">
+                    <h3>🌟 Suivez-nous</h3>
+                    <a href="#">🎵 TikTok @bonneaffaire78</a>
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📸 Instagram</a>
+                    <a href="#">🎬 YouTube</a>
+                </div>
+                <div class="footer-section">
+                    <h3>💎 Services Premium</h3>
+                    <p>✅ Livraison Express 24h</p>
+                    <p>🔧 Montage Professionnel</p>
+                    <p>♻️ Reprise Ancien Mobilier</p>
+                    <p>💳 Paiement en 3x sans frais</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bonne Affaire 78 - Votre spécialiste meubles nouvelle génération ✨</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
